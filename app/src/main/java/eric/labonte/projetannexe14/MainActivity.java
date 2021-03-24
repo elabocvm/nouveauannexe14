@@ -33,9 +33,11 @@ public class MainActivity extends AppCompatActivity {
         @Override
         public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
             String villeSec = (String)spin.getSelectedItem();
+            //début du calcul
             long tempsDebut = System.nanoTime();
             nbPass.setText(String.valueOf(instance.retournerAchalandage(villeSec)));
             long tempsFin = System.nanoTime();
+            //fin du calcul
             System.out.println ( tempsFin - tempsDebut);
         }
 
